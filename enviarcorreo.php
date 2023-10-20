@@ -75,7 +75,7 @@ $datos_usuario = mysqli_fetch_assoc($resultado_usuario);
     // Definir los encabezados del correo electrónico
     $mail = new PHPMailer();
 	$mail->CharSet = 'utf-8';
-	$mail->Host = "smtp.googlemail.com";
+	$mail->Host = "smtp.gmail.com"; //Host = "smtp.googlemail.com";
 	$mail->From = "ivancito.invc@gmail.com";
 	$mail->IsSMTP();
 	$mail->SMTPAuth = true;
@@ -84,7 +84,7 @@ $datos_usuario = mysqli_fetch_assoc($resultado_usuario);
 	$mail->SMTPSecure = "ssl";
 	$mail->Port = 465;
 	$mail->AddAddress($correo);
-	$mail->SMTPDebug = 0;   //Muestra las trazas del mail, 0 para ocultarla
+	$mail->SMTPDebug = 2;   //Muestra las trazas del mail, 0 para ocultarla
 	$mail->isHTML(true);                                  // Set email format to HTML
 	$mail->Subject = 'Gracias por su preferencia!';
 	$mail->Body = '<b>Adjuntamos un resumen de tu compra nwn</b>';
@@ -111,7 +111,7 @@ $datos_usuario = mysqli_fetch_assoc($resultado_usuario);
     
         if ($sql){
             
-            header ("location: indexprod.php");
+           // header ("location: indexprod.php");
         
         }else {
             echo "algo fallo en el proceso.";
