@@ -69,7 +69,7 @@ $datos_usuario = mysqli_fetch_assoc($resultado_usuario);
     //$pdf->Cell(0, 10, 'Total: $' . $total, 0, 1); // Cambio de $datos_historial['total'] a $total
 
       // Guardar el PDF en el servidor
-    $pdfPath = 'pdf/orden'.$id_usuario.'.pdf';
+    $pdfPath = 'PDF/orden'.$id_usuario.'.pdf';
     $pdf->Output($pdfPath, 'F');
 
     // Definir los encabezados del correo electrónico
@@ -81,13 +81,13 @@ $datos_usuario = mysqli_fetch_assoc($resultado_usuario);
 	$mail->SMTPAuth = true;
 	$mail->Username = "ivancito.invc@gmail.com";
 	$mail->Password = "nsohwfdzurbwahoe";
-	$mail->SMTPSecure = "ssl";
-	$mail->Port = 465;
+	$mail->SMTPSecure = "STARTTLS";
+	$mail->Port = 587;
 	$mail->AddAddress($correo);
 	$mail->SMTPDebug = 2;   //Muestra las trazas del mail, 0 para ocultarla
 	$mail->isHTML(true);                                  // Set email format to HTML
 	$mail->Subject = 'Gracias por su preferencia!';
-	$mail->Body = '<b>Adjuntamos un resumen de tu compra nwn</b>';
+	$mail->Body = '<b>Adjuntamos un resumen de tu compra Wapo</b>';
 	$mail->AltBody = 'Te mandamos el resumen de tu compra';
 
 	$inMailFileName = "recibo.pdf";

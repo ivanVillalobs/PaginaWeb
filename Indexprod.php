@@ -62,6 +62,7 @@ if(isset($_GET['id'])){
                     <li><a href="Ubicacion.html">Ubicacion</a></li>
                     <li><a href="Acuario_descripcion.html">Misión y visión</a></li>
                     <li><a href="cerrarsesion.php">Cerrar Sesion</a></li>
+		    <li><a href="http://10.0.0.4">Compras</a></li>
                 </ul>
             </nav>
 
