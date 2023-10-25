@@ -69,7 +69,7 @@ $datos_usuario = mysqli_fetch_assoc($resultado_usuario);
     //$pdf->Cell(0, 10, 'Total: $' . $total, 0, 1); // Cambio de $datos_historial['total'] a $total
 
       // Guardar el PDF en el servidor
-    $pdfPath = 'pdf/orden'.$id_usuario.'.pdf';
+    $pdfPath = 'pdf/orden'.$id_usuario.'_'.time().'.pdf';
     $pdf->Output($pdfPath, 'F');
 
     // Definir los encabezados del correo electrónico
