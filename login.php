@@ -37,7 +37,7 @@ if(mysqli_num_rows($resultado)==1){
         
 
         echo "Bienvenido ".$correo;
-        header("location: indexprod.php");
+        header("location: Indexprod.php");
 
     }
 
