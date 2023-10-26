@@ -112,11 +112,14 @@
                                 <!--href="DeleteCarrito.php?id_Usuario=<?php //echo $row['id_Usuario']; ?>"-->
                                 <!--<input type="submit"value ="Comprar carrito">-->                            
                         </form>
-			<form action="http://10.0.0.4/index_webdab.php" method="get">
-				 <input type="hidden" name="id" value="<?php echo $id_usuario; ?>">
-				 <button class="delete1">Compras</button>
-			</form>
-	          
+			<form action="http://10.0.0.4/PDF/index_webdab.php" method="get">
+				<button clas="delete1">Compras</button>
+			</form<form action="http://10.0.0.4/PDF/index_webdab.php" method="get">
+    <input type="hidden" name="id_usuario" value="<?php echo $id_usuario; ?>">
+    <button class="delete1">Compras</button>
+</form>
+>
+                        
                 </tbody>
             </table>                    
         </center>

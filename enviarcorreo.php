@@ -69,7 +69,7 @@ $datos_usuario = mysqli_fetch_assoc($resultado_usuario);
     //$pdf->Cell(0, 10, 'Total: $' . $total, 0, 1); // Cambio de $datos_historial['total'] a $total
 
       // Guardar el PDF en el servidor
-    $pdfPath = 'PDF/orden'.$id_usuario.'.pdf';
+    $pdfPath = 'PDF/orden'.$id_usuario.'__'.time().'.pdf';
     $pdf->Output($pdfPath, 'F');
 
     // Definir los encabezados del correo electrónico
@@ -91,7 +91,7 @@ $datos_usuario = mysqli_fetch_assoc($resultado_usuario);
 	$mail->AltBody = 'Te mandamos el resumen de tu compra';
 
 	$inMailFileName = "recibo.pdf";
-	$filePath = "PDF/orden$id_usuario.pdf";
+	$filePath = $pdfPath; //"PDF/orden$id_usuario.pdf";
 	$mail->AddAttachment($filePath, $inMailFileName);
 
 	$mail->send();
